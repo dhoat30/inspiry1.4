@@ -3,12 +3,12 @@ let $ = jQuery;
 class ToolTip {
     constructor() {
         $('.be-inspired-section').append(`
-                <div class="tooltips roboto-font paragraph-font-size box-shadow">
+                <div class="tooltips poppins-font paragraph-font-size box-shadow">
                     Save to design board
                 </div>`);
 
         $('.design-board-save-btn-container').append(`
-                <div class="tooltips roboto-font paragraph-font-size box-shadow">
+                <div class="tooltips poppins-font paragraph-font-size box-shadow">
                     Save to design board
                 </div>`);
         this.events();

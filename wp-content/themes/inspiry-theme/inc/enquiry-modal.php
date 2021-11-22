@@ -19,7 +19,7 @@ function add_enquiry_button(){
                 <div class="large-font-size regular center-align upper-case">
                     Interested to know more? 
                 </div>
-                <div class="paragraph-font-size thin center-align roboto-font margin-elements">
+                <div class="paragraph-font-size thin center-align poppins-font margin-elements">
                     Please fill in the form and one of our design consultants will respond to your enquiry as quickly as possible.
                 </div>
                 <div class="form">

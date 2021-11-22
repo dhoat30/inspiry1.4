@@ -34,7 +34,7 @@ echo $order->get_date_created();
             'author' => get_current_user_id()
         ));
         ?>
-        <div class="paragraph-font-size roboto-font post-count light-grey medium-font-size">
+        <div class="paragraph-font-size poppins-font post-count light-grey medium-font-size">
             <?php  echo $boardLoop->found_posts;?>
             boards
         </div>
@@ -121,7 +121,7 @@ echo $order->get_date_created();
                                 ?>
                             </div>
                             
-                            <div class="pin-count gray roboto-font thin"><?php echo $pinCount;
+                            <div class="pin-count gray poppins-font thin"><?php echo $pinCount;
                                 if($pinCount <= 1){ 
                                     echo ' Pin';
                                 }
@@ -132,7 +132,7 @@ echo $order->get_date_created();
                         </div>
                         
 
-                         <div class="roboto-font paragraph-font-size"><?php if( '' !== get_post()->post_content ) { 
+                         <div class="poppins-font paragraph-font-size"><?php if( '' !== get_post()->post_content ) { 
                                
                                 echo get_the_content();
                                  }
@@ -163,7 +163,7 @@ echo $order->get_date_created();
                                     <div class="project-save-form-section project-update" data-postid='20'>
        
                                     <div class="project-save-form-container"> 
-                                        <div class="roboto-font regular form-title medium-font-size">Create Board</div>
+                                        <div class="poppins-font regular form-title medium-font-size">Create Board</div>
                                         <div class="form-underline"></div>
                                         <div class="form">
                                             <form id="new-board-form-update">
@@ -177,11 +177,11 @@ echo $order->get_date_created();
                                                       <input id="update-status" type="checkbox" checked />
                                                       <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                                     </label>
-                                                    <div class="toggle-status roboto-font thin"><i class="fal fa-lock"></i> Private
+                                                    <div class="toggle-status poppins-font thin"><i class="fal fa-lock"></i> Private
                                                     </div>
                                                
                                                 </div>
-                                                <div class="toggle-status-info roboto-font paragraph-font-size regular">
+                                                <div class="toggle-status-info poppins-font paragraph-font-size regular">
                                                   Private boards cannot be shared with the general public. 
                                                 </div>
                                                
@@ -203,7 +203,7 @@ echo $order->get_date_created();
                                 <div class="project-save-form-section">
    
                                 <div class="project-save-form-container"> 
-                                    <div class="roboto-font regular form-title medium-font-size">Create Board</div>
+                                    <div class="poppins-font regular form-title medium-font-size">Create Board</div>
                                     <div class="form-underline"></div>
                                     <div class="form">
                                         <form id="new-board-form-archive">
@@ -216,11 +216,11 @@ echo $order->get_date_created();
                                                   <input type="checkbox" checked />
                                                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                                 </label>
-                                                <div class="toggle-status roboto-font thin"><i class="fal fa-lock"></i> Private
+                                                <div class="toggle-status poppins-font thin"><i class="fal fa-lock"></i> Private
                                                 </div>
                                            
                                             </div>
-                                            <div class="toggle-status-info roboto-font paragraph-font-size regular">
+                                            <div class="toggle-status-info poppins-font paragraph-font-size regular">
                                               Private boards cannot be shared with the general public. 
                                             </div>
                                            
@@ -241,7 +241,7 @@ echo $order->get_date_created();
 </div>
 <div class="overlay"></div>                       
 <div class="share-icon-container box-shadow">
-                        <div class="roboto-font regular medium-font-size"> Share this pin </div>
+                        <div class="poppins-font regular medium-font-size"> Share this pin </div>
                         <div class="underline"></div>
                         <div>
                             <?php echo do_shortcode('[Sassy_Social_Share  url="http:'.get_the_permalink(get_field('saved_project_id')).'"]');?>

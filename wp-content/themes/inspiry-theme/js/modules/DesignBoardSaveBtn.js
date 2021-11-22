@@ -286,19 +286,13 @@ class DesignBoardSaveBtn {
 
     //show board
     showChooseBoardContainer(e) {
+        console.log("design icon clicked")
         let eventPostID;
         let eventPostTitle;
 
-        let templateNameCheck = $('.bc-product__title').attr('data-archive');
         //check the page and assign the id and title value
-
-
-        let eventPostData = $(e.target).closest('.design-board-save-btn-container').attr('data-tracking-data');
-
-        //parsing json to javascript object
-        eventPostData = JSON.parse(eventPostData);
-        eventPostID = eventPostData.post_id
-        eventPostTitle = eventPostData.name;
+        eventPostID = $(e.target).closest('.design-board-save-btn-container').attr('data-id');
+        eventPostTitle = $(e.target).closest('.design-board-save-btn-container').attr('data-name');
 
 
 

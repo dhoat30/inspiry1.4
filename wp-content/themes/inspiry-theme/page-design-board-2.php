@@ -58,7 +58,7 @@ get_header();
                                 }
                             ?></div>
 
-                             <div class="roboto-font paragraph-font-size"><?php if( '' !== get_post()->post_content ) { 
+                             <div class="poppins-font paragraph-font-size"><?php if( '' !== get_post()->post_content ) { 
                                    
                                     echo get_the_content();
                                      }
@@ -80,7 +80,7 @@ get_header();
 </div>
 <div class="overlay"></div>                       
 <div class="share-icon-container box-shadow">
-                            <div class="roboto-font regular medium-font-size"> Share this pin </div>
+                            <div class="poppins-font regular medium-font-size"> Share this pin </div>
                             <div class="underline"></div>
                             <div>
                                 <?php echo do_shortcode('[Sassy_Social_Share  url="http:'.get_the_permalink(get_field('saved_project_id')).'"]');?>

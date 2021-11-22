@@ -128,13 +128,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     $banner->the_post(); 
                     if(get_field('banner_link')){
                         ?>
-                                        <a href="<?php echo get_field('banner_link');?>" class="white roboto-font center-align paragraph-font-size thin"> <?php echo get_the_title(); ?> LEARN <i class="fal fa-chevron-right white"></i></a>
+                                        <a href="<?php echo get_field('banner_link');?>" class="white poppins-font center-align paragraph-font-size thin"> <?php echo get_the_title(); ?> LEARN <i class="fal fa-chevron-right white"></i></a>
 
                         <?php
                     }
                     else{
                         ?>
-                        <a href="<?php echo get_field('banner_link');?>" class="white roboto-font center-align paragraph-font-size thin"> <?php echo get_the_title(); ?></a>
+                        <a href="<?php echo get_field('banner_link');?>" class="white poppins-font center-align paragraph-font-size thin"> <?php echo get_the_title(); ?></a>
                         <?php
                     }
                 } 
@@ -275,7 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             
                             <div class="price-container">
-                            <h6 class="paragraph-font-size roboto-font bold">$<?php echo number_format($product->price * $quantity) ?></h6>
+                            <h6 class="paragraph-font-size poppins-font bold">$<?php echo number_format($product->price * $quantity) ?></h6>
                             </div>
                             <i class="fal fa-times remove-cart-item-btn" data-productID="<?php echo $product_id;?>"></i>
                         </a>
@@ -296,7 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 
                                 <div class="price-container">
-                                <h6 class="paragraph-font-size roboto-font bold">$<?php echo number_format($product->price * $quantity); ?></h6>
+                                <h6 class="paragraph-font-size poppins-font bold">$<?php echo number_format($product->price * $quantity); ?></h6>
                                 </div>
                                 
                                 <i class="fal fa-times remove-cart-item-btn" data-productID="<?php echo $product_id;?>"></i>
@@ -315,7 +315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="pop-up-footer">
                     <div class="total-container">
                         
-                        <div class="total roboto-font">
+                        <div class="total poppins-font">
                             Total: $<?php 
                             $totalAmount = str_replace(".00", "", (string)number_format (WC()->cart->total, 2, ".", ""));
                             echo number_format($totalAmount); ?>

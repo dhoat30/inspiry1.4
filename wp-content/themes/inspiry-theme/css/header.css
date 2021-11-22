@@ -185,12 +185,9 @@
     background: rgb(241, 241, 241) !important;
     color: #333 !important;
   }
-  /* .top-banner .shopping-cart {
-    position: absolute;
-    top: 0;
-    z-index: 1003;
-    right: 0;
-  } */
+  .mega-menu-link:hover {
+    text-decoration-line: underline !important;
+  }
 
   #mega-menu-wrap-inspiry_main_menu .mega-menu-toggle {
     background: none;

@@ -38,6 +38,8 @@ require get_theme_file_path('/inc/api-routes/search-routes.php');
 require get_theme_file_path('/inc/api-routes/social-login-routes.php');
 require get_theme_file_path('/inc/api-routes/windcave-routes.php');
 
+require get_theme_file_path('/inc/webduel-short-code.php');
+
  //enqueue scripts
  function inspiry_scripts(){ 
    wp_enqueue_script("jQuery");
@@ -48,9 +50,9 @@ require get_theme_file_path('/inc/api-routes/windcave-routes.php');
       wp_enqueue_script('main', 'http://localhost:3000/bundled.js',  array( 'jquery' ), '1.0', true);
     } else {
       wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.fa583623385eedc86539.js'),  array( 'jquery' ), '1.0', true);
-      wp_enqueue_script('main', get_theme_file_uri('/bundled-assets/scripts.9bed5bf82f8ec4f1b06d.js'), NULL, '1.0', true);
-      wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.9bed5bf82f8ec4f1b06d.css'));      
-      wp_enqueue_style('our-vendor-styles', get_theme_file_uri('/bundled-assets/styles.9bed5bf82f8ec4f1b06d.css'));
+      wp_enqueue_script('main', get_theme_file_uri('/bundled-assets/scripts.92fa0ab592dad3f97bfa.js'), NULL, '1.0', true);
+      wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.92fa0ab592dad3f97bfa.css'));      
+      wp_enqueue_style('our-vendor-styles', get_theme_file_uri('/bundled-assets/styles.92fa0ab592dad3f97bfa.css'));
     }
     
     wp_localize_script("main", "inspiryData", array(
@@ -303,7 +305,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
                             </div>
                             
                             <div class="price-container">
-                            <h6 class="paragraph-font-size roboto-font bold">$<?php echo number_format($product->price * $quantity) ?></h6>
+                            <h6 class="paragraph-font-size poppins-font bold">$<?php echo number_format($product->price * $quantity) ?></h6>
                             </div>
                             <i class="fal fa-times remove-cart-item-btn" data-productID="<?php echo $product_id;?>"></i>
                         </a>
@@ -324,7 +326,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
                                 </div>
                                 
                                 <div class="price-container">
-                                <h6 class="paragraph-font-size roboto-font bold">$<?php echo number_format($product->price * $quantity); ?></h6>
+                                <h6 class="paragraph-font-size poppins-font bold">$<?php echo number_format($product->price * $quantity); ?></h6>
                                 </div>
                                 
                                 <i class="fal fa-times remove-cart-item-btn" data-productID="<?php echo $product_id;?>"></i>
@@ -343,7 +345,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
                 <div class="pop-up-footer">
                     <div class="total-container">
                         
-                        <div class="total roboto-font">
+                        <div class="total poppins-font">
                             Total: $<?php 
                             $totalAmount = str_replace(".00", "", (string)number_format (WC()->cart->total, 2, ".", ""));
                             echo number_format($totalAmount); ?>

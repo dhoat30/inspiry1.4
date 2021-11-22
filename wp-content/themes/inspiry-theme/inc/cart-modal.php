@@ -36,7 +36,7 @@ function modal_html(){
                         <div class="section-font-size  center-align">'; 
                     echo get_the_title();
                     echo ' </div>
-                        <div class="center-align medium-font-size roboto-font">'; 
+                        <div class="center-align medium-font-size poppins-font">'; 
                echo get_the_content(); 
                echo ' </div>
                     </div>

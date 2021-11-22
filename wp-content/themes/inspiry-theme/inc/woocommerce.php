@@ -147,7 +147,7 @@ add_filter( 'wc_product_enable_dimensions_display', '__return_false' );
 
 //add label infront of quantity
 add_action('woocommerce_before_quantity_input_field', function(){
-    echo '<h6 class="qty-text roboto-font regular">Quantity:</h6>';
+    echo '<h6 class="qty-text poppins-font regular">Quantity:</h6>';
 });
 
 //remove meta-data 
@@ -160,8 +160,8 @@ remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_pr
 //add availablity 
 add_action('add_availability_share', function(){
 
-  //  echo '<p class="availability roboto-font regular-text">Availability: <span class="days">7 - 10 Days</span></p>';
-    echo '<p class="share-section roboto-font regular-text">Share: '. do_shortcode( "[Sassy_Social_Share]" ).'</p>'; 
+  //  echo '<p class="availability poppins-font regular-text">Availability: <span class="days">7 - 10 Days</span></p>';
+    echo '<p class="share-section poppins-font regular-text">Share: '. do_shortcode( "[Sassy_Social_Share]" ).'</p>'; 
 }, 100);
 
 

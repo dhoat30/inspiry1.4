@@ -73,7 +73,7 @@ get_header();
         <div>
             <i class="fal fa-truck"></i>
             <div>
-                <span class="roboto-font medium-font-size medium">Free Shipping NZ Wide</span> <br>
+                <span class="poppins-font medium-font-size medium">Free Shipping NZ Wide</span> <br>
                 <span>on all wallpaper and fabric</span>
             </div>
 
@@ -81,14 +81,14 @@ get_header();
         <div>
             <i class="fal fa-tag"></i>
             <div>
-                <span class="roboto-font medium-font-size medium">Beautiful Designer Brands</span> <br>
-                <span class="roboto-font paragraph-font-size">furniture, homeware & rugs</span>
+                <span class="poppins-font medium-font-size medium">Beautiful Designer Brands</span> <br>
+                <span class="poppins-font paragraph-font-size">furniture, homeware & rugs</span>
             </div>
         </div>
         <div>
             <i class="fal fa-shipping-timed"></i>
             <div>
-                <span class="roboto-font medium-font-size medium">shipped daily</span> <br>
+                <span class="poppins-font medium-font-size medium">shipped daily</span> <br>
                 <span>to your door</span>
             </div>
         </div>

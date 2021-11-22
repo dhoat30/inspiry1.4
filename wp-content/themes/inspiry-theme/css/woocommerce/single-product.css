@@ -35,12 +35,10 @@
 /* product description*/
 .single-product .product-description {
   color: #444;
-  line-height: 1.4em;
-  letter-spacing: 1px;
+  line-height: 1.6em;
   font-size: 15px;
   margin-bottom: 25px;
-  font-family: work sans, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 .single-product .woocommerce-Price-amount,
 bdi {
@@ -268,7 +266,6 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top: 20px;
 }
 .yith-wcwl-add-to-wishlist {
   margin-top: 0 !important;
@@ -356,11 +353,13 @@ span {
 }
 
 /* single product title container */
-.single-product-title-container {
+.single-product-before-title-container {
   display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px 0;
+  align-items: flex-end;
 }
+
 .design-board-container {
   min-width: 50px;
-  border: solid red;
-  margin-left: 10px;
 }

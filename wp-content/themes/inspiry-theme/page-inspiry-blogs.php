@@ -4,7 +4,7 @@
     <!--first section --> 
     <section class="row-container first-section">
         <div class="sidebar row-container">
-                <div class="roboto-font medium-font-sizeium">Category</div>
+                <div class="poppins-font medium-font-sizeium">Category</div>
                 <?php echo do_shortcode('[facetwp facet="blogs"]');?>
                 <button onclick="FWP.reset()" class="facet-reset-btn">Reset</button>
         </div>
@@ -45,7 +45,7 @@
                     <div>
                             <img src="<?php echo get_the_post_thumbnail_url(null,"large"); ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE);?>">                      
                             <div class="medium-font-size center-align text-padding"><?php the_title(); ?></div>
-                            <div class="paragraph-font-size roboto-font center-align text-padding"><?php 
+                            <div class="paragraph-font-size poppins-font center-align text-padding"><?php 
                              echo wp_trim_words(get_the_content(), 15) ;?> </div>
                              <a class="button btn-dk-green rm-txt-dec" href="<?php the_permalink();?>">READ THE POST</a>
                     </div>

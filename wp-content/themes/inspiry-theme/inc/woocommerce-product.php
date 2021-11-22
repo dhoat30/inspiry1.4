@@ -100,9 +100,14 @@ add_action("woocommerce_single_product_summary", "single_product_page_title_star
 
 function single_product_page_title_start(){ 
     global $product; 
-    echo $product->get_attribute( 'pa_brands' );
-    echo  '<div class="single-product-title-container">';
-    echo '<div class="design-board-container">hello</div>';
+    // find the brand name of the product
+    $brand = array_shift( wc_get_product_terms( $product->id, 'pa_brands', array( 'fields' => 'names' ) ) );
+
+    echo  '<div class="single-product-before-title-container">';
+        echo '<div class="poppins-font brand-name">'; 
+        echo $brand; 
+        echo '</div>';
+        echo '<div class="design-board-container">'. do_shortcode('[design_board_button_code]').'</div>';
     echo '</div>';
 }
 

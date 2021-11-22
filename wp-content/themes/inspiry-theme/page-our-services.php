@@ -89,8 +89,8 @@ get_header();
                 <i class="fas fa-quote-left"></i>
                 <div class='background beige-color-bc'>
                     <div class="column-font-size regular">Corrine has a great sense of style, taste & knew what I wanted. She helped me so much and inspired me with lights, drapes, furniture and painting. She took all the pressure away and I love everything.</div>
-                    <span class="roboto-font medium medium-font-size">Mary Jaques</span>
-                    <div class="roboto-font medium-font-size regular">Bay Of Plenty</div>
+                    <span class="poppins-font medium medium-font-size">Mary Jaques</span>
+                    <div class="poppins-font medium-font-size regular">Bay Of Plenty</div>
                 </div>
                 
             </div>

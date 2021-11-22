@@ -10,7 +10,7 @@ get_header();
     
     <div class="title-container flex-row flex-start align-end">
         <h1 class="section-font-size">Trending Now</h1>  
-        <h2 class="roboto-font medium-font-size thin">What we’re covering most this season</h2>                                
+        <h2 class="poppins-font medium-font-size thin">What we’re covering most this season</h2>                                
     </div>                                   
     
     <div class="flex flex-row owl-carousel">

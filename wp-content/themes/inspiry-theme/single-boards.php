@@ -21,7 +21,7 @@ get_header();
                     
            
                         <i class="fal fa-times"></i>
-                        <h2 class="roboto-font medium-font-sizeium regular">Share this board</h2>
+                        <h2 class="poppins-font medium-font-sizeium regular">Share this board</h2>
                         <div class="underline underline-bg margin-elements"></div>
                         <div>
                             <?php echo do_shortcode('[Sassy_Social_Share]');?>
@@ -39,7 +39,7 @@ get_header();
 
                 <div>
                     <div class="project-save-form-container">
-                        <div class="roboto-font regular form-title medium-font-size">Upload</div>
+                        <div class="poppins-font regular form-title medium-font-size">Upload</div>
                         <div class="form-underline"></div>
                         <div class="form">
                             <form action="{{admin_url}}" method="POST" enctype="multipart/form-data" id="upload-image">
@@ -118,7 +118,7 @@ get_header();
                 </div>
 
                 <div class="share-icon-container box-shadow">
-                    <div class="roboto-font regular medium-font-size"> Share this pin </div>
+                    <div class="poppins-font regular medium-font-size"> Share this pin </div>
                     <div class="underline"></div>
                     <div>
 

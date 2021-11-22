@@ -3,7 +3,7 @@
     <div class="section-font-size">
       Sign up For Inspiry Emails.
     </div>
-    <div class="roboto-font paragraph-font-size">
+    <div class="poppins-font paragraph-font-size">
       Plus hear about the latest and greatest from our family of brands!
     </div>
   </div>
@@ -123,13 +123,13 @@
                                         
                                         $boardLoop = new WP_Query(array(
                                             'post_type' => 'boards', 
-                                            'post_parent' => 0
+                                            'post_parent' => 0,
+                                            'author' => get_current_user_id()
                                         ));
                                         
                                         while($boardLoop->have_posts()){
                                             $boardLoop->the_post(); 
                                             
-                                          
                                         }
                                     
                                             while($boardLoop->have_posts()){ 
@@ -159,7 +159,7 @@
   <div class="project-save-form-section">
 
     <div class="project-save-form-container">
-      <div class="roboto-font regular form-title medium-font-size">Create Board</div>
+      <div class="poppins-font regular form-title medium-font-size">Create Board</div>
       <div class="form-underline"></div>
       <div class="form">
         <form id="new-board-form">
@@ -172,11 +172,11 @@
               <input type="checkbox" checked />
               <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
             </label>
-            <div class="toggle-status roboto-font thin"><i class="fal fa-lock"></i> Private
+            <div class="toggle-status poppins-font thin"><i class="fal fa-lock"></i> Private
             </div>
 
           </div>
-          <div class="toggle-status-info roboto-font paragraph-font-size regular">
+          <div class="toggle-status-info poppins-font paragraph-font-size regular">
             Private boards cannot be shared with the general public.
           </div>
 

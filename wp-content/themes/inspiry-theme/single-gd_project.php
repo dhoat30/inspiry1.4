@@ -72,7 +72,7 @@ get_header();
                     </div>        
                 </div>
 
-                <div>  <p class="share-section roboto-font regular-text">Share: <?php echo do_shortcode( '[Sassy_Social_Share]' );?></p>
+                <div>  <p class="share-section poppins-font regular-text">Share: <?php echo do_shortcode( '[Sassy_Social_Share]' );?></p>
                 </div>
             </div>  
                 

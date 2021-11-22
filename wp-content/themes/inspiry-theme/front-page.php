@@ -35,7 +35,7 @@ get_header();
     
     <div class="title-container flex-row flex-start align-end">
         <h1 class="section-font-size">Trending Now</h1>  
-        <h2 class="roboto-font medium-font-size thin">What we’re covering most this season</h2>                                
+        <h2 class="poppins-font medium-font-size thin">What we’re covering most this season</h2>                                
     </div>                                   
     
     <div class="flex flex-row owl-carousel">
@@ -140,7 +140,7 @@ get_header();
     
     <div class="title-container flex-row flex-start align-end">
         <h1 class="section-font-size">International Brands</h1>  
-        <h2 class="roboto-font medium-font-size thin">Browse amazing interior brands </h2>                                
+        <h2 class="poppins-font medium-font-size thin">Browse amazing interior brands </h2>                                
     </div>                                   
     
     <div class="flex flex-row owl-carousel">
@@ -369,7 +369,7 @@ get_header();
                 </div>
                 <div class="title-container flex-row align-end flex-center">
                     <h6 class="column-font-size regular upper-case"><?php echo get_the_title();?></h6>
-                    <p class="roboto-font paragraph-font-size thin dark-grey"><?php echo get_the_content();?></p>
+                    <p class="poppins-font paragraph-font-size thin dark-grey"><?php echo get_the_content();?></p>
                 </div>
         <?php 
 
@@ -502,7 +502,7 @@ get_header();
                 </div>
                 <div class="title-container flex-row align-end flex-center">
                     <h6 class="column-font-size regular upper-case"><?php echo get_the_title();?></h6>
-                    <p class="roboto-font paragraph-font-size thin dark-grey"><?php echo get_the_content();?></p>
+                    <p class="poppins-font paragraph-font-size thin dark-grey"><?php echo get_the_content();?></p>
                 </div>
         <?php 
 
@@ -522,7 +522,7 @@ get_header();
     
     <div class="title-container flex-row flex-start align-end">
         <div class="section-font-size">Our Favourites</div>  
-        <h4 class="roboto-font medium-font-size thin">What we’re covering most this season</h4>                                
+        <h4 class="poppins-font medium-font-size thin">What we’re covering most this season</h4>                                
     </div>                                   
     
     <div class="flex flex-row owl-carousel owl-theme">
@@ -697,7 +697,7 @@ get_header();
             <!-- content box -->
             <div class="content-box beige-color-bc flex-column">
                 <div class="title-container margin-elements">
-                    <div class="medium-font-size thin center-align roboto-font upper-case">#inspirynz</div>
+                    <div class="medium-font-size thin center-align poppins-font upper-case">#inspirynz</div>
                     <h6 class="center-align section-font-size regular"><?php echo get_the_title();?></h6>
                 </div>
                 <?php 
@@ -713,9 +713,9 @@ get_header();
                     if(get_field('step_1')){
                         ?>
 
-                        <div class="step_1 roboto-font thin medium-font-size"><?php echo get_field('step_1'); ?></div>
-                        <div class="step_2 roboto-font thin medium-font-size"><?php echo get_field('step_2'); ?></div>
-                        <div class="step_3 roboto-font thin medium-font-size"><?php echo get_field('step_3'); ?></div>
+                        <div class="step_1 poppins-font thin medium-font-size"><?php echo get_field('step_1'); ?></div>
+                        <div class="step_2 poppins-font thin medium-font-size"><?php echo get_field('step_2'); ?></div>
+                        <div class="step_3 poppins-font thin medium-font-size"><?php echo get_field('step_3'); ?></div>
                         <?php 
                     }
                 ?>
@@ -771,7 +771,7 @@ get_header();
                 <!-- content box -->
                 <div class="content-box beige-color-bc">
                     <div class="title center-align section-font-size typewriter-title" >Trade Professional</div>  
-                    <div class="paragraph center-align roboto-font regular"><?php echo get_the_content();?></div>
+                    <div class="paragraph center-align poppins-font regular"><?php echo get_the_content();?></div>
                     <a class="button btn-dk-green rm-txt-dec center-align" href="<?php echo get_site_url();?>/trade-professionals/">View Trade Professionals</a>
                     <a class="button btn-dk-green-border rm-txt-dec center-align" href="<?php echo get_site_url();?>/add-listing/?listing_type=gd_place">Join Trade Directory</a>
 

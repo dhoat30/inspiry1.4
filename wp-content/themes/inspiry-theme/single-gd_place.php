@@ -42,7 +42,7 @@ get_header();
                 </div>
 
                 <div>
-                    <p class="share-section roboto-font regular-text">Share:
+                    <p class="share-section poppins-font regular-text">Share:
                         <?php echo do_shortcode( '[Sassy_Social_Share]' );?></p>
                 </div>
             </div>
@@ -83,11 +83,11 @@ get_header();
                 </div>
                 <!--
                 <div class="header-contact-details">
-                        <a class="roboto-font medium-font-size rm-txt-dec " href="tel:<? //php echo do_shortcode( '[gd_post_meta key="phone" show="value-raw" no_wrap="1"]');?>">
+                        <a class="poppins-font medium-font-size rm-txt-dec " href="tel:<? //php echo do_shortcode( '[gd_post_meta key="phone" show="value-raw" no_wrap="1"]');?>">
                             <i class="fas fa-phone-alt"></i>
                             <?php //echo do_shortcode( '[gd_post_meta key="phone" show="value-raw" no_wrap="1"]');?>
                         </a>
-                        <a class="roboto-font medium-font-size rm-txt-dec " href=" <? //php echo do_shortcode( '[gd_post_meta key="website" show="value-raw" no_wrap="1"]');?>" target="_blank">
+                        <a class="poppins-font medium-font-size rm-txt-dec " href=" <? //php echo do_shortcode( '[gd_post_meta key="website" show="value-raw" no_wrap="1"]');?>" target="_blank">
                             <i class="fas fa-globe"></i>
                             Website
                         </a>
@@ -112,18 +112,18 @@ get_header();
                     <li class="trade-nav-link">Gallery</li>
                 </ul>
 
-                <div class="trade-about-nav-content roboto-font medium-font-size">
+                <div class="trade-about-nav-content poppins-font medium-font-size">
                     <?php 
                     echo get_the_content();
                     ?>
                 </div>
 
                 <div class="trade-contact-nav-content">
-                    <table class="roboto-font">
+                    <table class="poppins-font">
                         <tr>
                             <td><i class="fal fa-phone-alt"></i></td>
                             <td class="medium-font-size">
-                                <a class="rm-txt-dec thin roboto-font"
+                                <a class="rm-txt-dec thin poppins-font"
                                     href="tel:<?php echo geodir_get_post_meta($postID, 'phone', true);?>">
                                     <?php echo geodir_get_post_meta($postID, 'phone', true);?>
                                 </a>
@@ -132,7 +132,7 @@ get_header();
                         <tr>
                             <td><i class="fal fa-envelope"></i></td>
                             <td class="medium-font-size">
-                                <a class="rm-txt-dec thin roboto-font"
+                                <a class="rm-txt-dec thin poppins-font"
                                     href="mailto:<?php echo geodir_get_post_meta($postID, 'email', true);?>">
                                     <?php echo geodir_get_post_meta($postID, 'email', true);?>
                                 </a>
@@ -141,14 +141,14 @@ get_header();
                         <tr>
                             <td><i class="fal fa-globe"></i></td>
                             <td class="medium-font-size">
-                                <a class="rm-txt-dec thin roboto-font"
+                                <a class="rm-txt-dec thin poppins-font"
                                     href="<?php echo geodir_get_post_meta($postID, 'website', true);?>"><?php echo geodir_get_post_meta($postID, 'website', true);?>
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td><i class="fal fa-map-marker-alt"></i></td>
-                            <td class="medium-font-size thin roboto-font"><?php echo geodir_get_post_meta($postID, 'address', true);
+                            <td class="medium-font-size thin poppins-font"><?php echo geodir_get_post_meta($postID, 'address', true);
                             echo geodir_get_post_meta($postID, 'regions_covered', true);?></td>
                         </tr>
 
@@ -221,7 +221,7 @@ get_header();
                                         </div>
                                     </a>
                                     <a href="<?php echo get_the_permalink($postID); ?>"
-                                        class='rm-txt-dec paragraph-font-size thin roboto-font'>
+                                        class='rm-txt-dec paragraph-font-size thin poppins-font'>
                                         <?php echo get_the_title($postID); ?>
                                     </a>
 
