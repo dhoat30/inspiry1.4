@@ -111,8 +111,6 @@ function single_product_page_title_start(){
     echo '</div>';
 }
 
-
-
 // single product page share container 
 add_action("woocommerce_single_product_summary", "share_code_after_cart", 50); 
 
@@ -121,4 +119,11 @@ function share_code_after_cart(){
     echo '<div class="margin-elements">';
     do_action('add_availability_share'); 
     echo '</div>';
+}
+
+// product loop page - add design board buttons 
+add_action('woocommerce_before_shop_loop_item_title', 'loop_product_design_board_buttons', 5); 
+
+function loop_product_design_board_buttons(){
+    echo do_shortcode('[design_board_button_code]');
 }

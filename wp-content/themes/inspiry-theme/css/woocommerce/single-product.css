@@ -220,7 +220,7 @@ p {
 }
 
 .woocommerce ul.products li.product .button {
-  margin-top: 10px !important;
+  margin-top: 10px;
 }
 .add_to_cart_button {
   color: #fff !important;
@@ -270,6 +270,19 @@ p {
 .yith-wcwl-add-to-wishlist {
   margin-top: 0 !important;
 }
+.yith-wcwl-add-to-wishlist .single_add_to_wishlist i {
+  margin-right: 0;
+  font-size: 20px;
+  color: var(--blue);
+}
+.yith-wcwl-add-to-wishlist .single_add_to_wishlist {
+  border-radius: 50% !important;
+  padding: 8px 5px 3px 8px !important;
+}
+/* 
+.yith-wcwl-add-to-wishlist {
+  margin-top: 0 !important;
+}
 .yith-wcwl-add-button a {
   padding: 0 !important;
 }
@@ -277,7 +290,7 @@ p {
   margin-top: 5px !important;
   font-size: 25px !important;
   font-weight: 300 !important;
-}
+} */
 
 /*warrenty */
 .bc-single-product__warranty h1 {

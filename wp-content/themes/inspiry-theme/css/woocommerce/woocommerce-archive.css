@@ -200,3 +200,15 @@ span {
   font-size: 0.8rem;
   font-weight: 500;
 }
+
+.archive .product .wishlist-designer-board-container {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.archive .product .single_add_to_wishlist {
+  margin-top: 0 !important;
+}
+.archive .product .yith-wcwl-wishlistaddedbrowse {
+  display: none;
+}

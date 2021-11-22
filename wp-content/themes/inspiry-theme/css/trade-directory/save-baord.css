@@ -1,8 +1,7 @@
 /*board save button area*/
 .design-board-save-btn-container {
   position: relative;
-
-  width: 50px;
+  width: 42px;
 }
 
 .design-board-save-btn-container i {
