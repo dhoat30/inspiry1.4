@@ -31,7 +31,7 @@ if ( $related_products ) : ?>
 			<h2 class="regular section-font-size center-align"><?php echo esc_html( $heading ); ?></h2>
 			<div class="small-underline"></div>
 		<?php endif; ?>
-		
+		<!-- removed product loop on single product page -->
 		<?php //woocommerce_product_loop_start(); ?>
 
 			<?php //foreach ( $related_products as $related_product ) : ?>

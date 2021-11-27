@@ -2,21 +2,21 @@
 .design-board-save-btn-container {
   position: relative;
   width: 42px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #efefef;
 }
 
 .design-board-save-btn-container i {
   font-size: 20px;
-  padding: 8px 10px 6px 10px;
-  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 5.5px;
+  /* padding: 8px 10px 6px 10px; */
   cursor: pointer;
   font-weight: 300 !important;
-  background: #efefef;
-  color: #303030;
-}
-
-.design-board-save-btn-container i:hover {
-  color: #efefef;
-  background: #303030;
+  color: var(--red);
 }
 
 .back-icon-container i {

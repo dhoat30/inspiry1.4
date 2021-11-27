@@ -28,7 +28,8 @@ function mytheme_add_woocommerce_support(){
 //adding container on product archive page
 add_action('add_filters', 'add_container', 1); 
 function add_container($class){
-echo '<div class="row-container container flex-row flex-space-between margin-row '.$class.'">';
+echo '<section class="product-loop-page-section">';
+echo '<div class="container flex-row flex-space-between product-loop-page-container'.$class.'">';
 
 }
 
@@ -37,6 +38,7 @@ add_action('woocommerce_after_main_content', 'add_container_closing_div');
 
 function add_container_closing_div(){
 echo '</div>';
+echo '</section>';
 }
 
 function add_double_container_closing_div(){
@@ -47,19 +49,61 @@ add_action('add_filters', 'add_facetwp_filters', 1);
 
 function add_facetwp_filters(){
     echo '<div class="facet-wp-container">' ;
-        echo do_shortcode('[facetwp facet="categories"]'); 
-        echo do_shortcode('[facetwp facet="brand"]'); 
-        echo do_shortcode('[facetwp facet="collection"]'); 
-        echo do_shortcode('[facetwp facet="design_style"]');
-        echo do_shortcode('[facetwp facet="colour_family"]'); 
-        echo do_shortcode('[facetwp facet="pattern"]'); 
-        echo do_shortcode('[facetwp facet="composition"]'); 
-        echo do_shortcode('[facetwp facet="availability"]');
-        echo do_shortcode('[facetwp facet="sho"]');
-
+    echo do_shortcode('[add_filter_button]');
+      echo '<div class="desktop">';   
+         
+          echo do_shortcode('[facetwp facet="categories"]');  
+          echo do_shortcode('[facetwp facet="brand"]');  
+          echo do_shortcode('[facetwp facet="collection"]');  
+          echo do_shortcode('[facetwp facet="design_style"]');  
+          echo do_shortcode('[facetwp facet="colour_family"]');  
+          echo do_shortcode('[facetwp facet="pattern"]');  
+          echo do_shortcode('[facetwp facet="composition"]');  
+          echo do_shortcode('[facetwp facet="availability"]');  
+          echo do_shortcode('[facetwp facet="price_range"]');  
         echo '<button class="facet-reset-btn" onclick="FWP.reset()">Reset All Filter</button>'; 
+      echo '</div>'; 
+
+      echo '<div class="mobile-filter-container">';   
+        echo do_shortcode('[facetwp facet="categories_m"]');  
+        echo do_shortcode('[facetwp facet="brand_m"]');  
+        echo do_shortcode('[facetwp facet="collection_m"]');  
+        echo do_shortcode('[facetwp facet="design_style_m"]');  
+        echo do_shortcode('[facetwp facet="colour_family_m"]');  
+        echo do_shortcode('[facetwp facet="pattern_m"]');  
+        echo do_shortcode('[facetwp facet="composition_m"]');  
+        echo do_shortcode('[facetwp facet="availability_m"]');  
+        echo do_shortcode('[facetwp facet="price_range_m"]');   
+        echo '<button class="close-button show-results"> Show All Results </button>';
+        echo '<button class="facet-reset-btn" onclick="FWP.reset()">Reset All Filter</button>'; 
+        echo '<i class="fal fa-times close-icon"></i>'; 
+      echo '</div>'; 
     echo '</div>';
 }
+
+
+// add facet label 
+function fwp_add_facet_labels() {
+  ?>
+  <script>
+  (function($) {
+      $(document).on('facetwp-loaded', function() {
+          $('.facetwp-facet').each(function() {
+              var $facet = $(this);
+              var facet_name = $facet.attr('data-name');
+              var facet_label = FWP.settings.labels[facet_name];
+  
+              if ($facet.closest('.facet-wrap').length < 1 && $facet.closest('.facetwp-flyout').length < 1) {
+                  $facet.wrap('<div class="facet-wrap"></div>');
+                  $facet.before('<h3 class="facet-label">' + facet_label + '</h3>');
+              }
+          });
+      });
+  })(jQuery);
+  </script>
+  <?php
+  }
+  add_action( 'wp_head', 'fwp_add_facet_labels', 100 );
 
 //adding filter 
 //add_action('woocommerce_before_main_content', 'add_facetwp_filters', 1); 
@@ -134,7 +178,6 @@ add_action('woocommerce_single_product_summary', 'woocommerce_output_product_dat
 //remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs');
 
 function tutsplus_remove_product_long_desc( $tabs ) {
- 
     unset( $tabs['description'] ); //remove description 
     $tabs['additional_information']['title'] = __( 'Details' ); //change name to Details
     return $tabs;
@@ -631,10 +674,9 @@ add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_checkout' );
 // remove add to cart button on loop product page
 add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
     function remove_add_to_cart_buttons() {
-      if( is_product_category() || is_shop()) { 
+      if( is_product_category() || is_shop() || is_archive() ) { 
         remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
       }
-
     }
 
 // add product attributes on product loop product page
@@ -642,11 +684,7 @@ add_action("woocommerce_after_shop_loop_item_title", "add_product_attributes", 1
 
 function add_product_attributes(){ 
   // add free shipping 
-    global $product;
-    if($product->get_shipping_class()==="free-shipping"){ 
-      echo '<p class="product-loop-attribute">FREE SHIPPING</p>'; 
-    }
- 
+   echo do_shortcode('[add_free_shipping_tag]'); 
 }
 // remove sale badge
 add_filter( 'woocommerce_sale_flash', '__return_null' );

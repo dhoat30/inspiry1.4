@@ -12,6 +12,8 @@
 @import "css/woocommerce/checkout.css";
 @import "css/woocommerce/account.css";
 @import "css/woocommerce/popup-cart.css";
+@import "css/woocommerce/wishlist.css";
+@import "css/woocommerce/facet-filter.css";
 
 @import "css/product-page.css";
 @import "css/product-page-custom-styling.css";
@@ -35,7 +37,6 @@
 @import "css/account.css";
 @import "css/cart.css";
 @import "css/login-page.css";
-@import "css/wishlist.css";
 
 /*design boards */
 
@@ -93,10 +94,12 @@
   --black: #303030;
   --poppins: "Poppins", sans-serif;
   --roboto: "Roboto", sans-serif;
+  --playfairDisplay: "Playfair Display", serif;
   --transition: 500ms ease-in-out;
   --boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
   --cardBorderRadius: 16px;
   --blue: #007272;
+  --red: #e60023;
 }
 * {
   box-sizing: border-box;
@@ -263,7 +266,7 @@ textarea::placeholder {
 .medium-font-size {
   font-size: 18px;
   letter-spacing: 0.03em !important;
-  margin: 0 !important;
+  margin: 0;
   line-height: 1.5em;
   font-weight: 300;
 }
@@ -546,7 +549,7 @@ textarea::placeholder {
   cursor: pointer;
   color: #303030;
 }
-
+/* 
 .fa-times:hover {
   position: absolute;
   top: 20px;
@@ -554,7 +557,7 @@ textarea::placeholder {
   font-size: 30px;
   cursor: pointer;
   color: #525659;
-}
+} */
 
 /*save button*/
 
@@ -671,3 +674,17 @@ textarea::placeholder {
 }
 
 /* lightbox for design board */
+
+/* close button */
+.close-button {
+  display: block;
+  width: 100%;
+  background: none;
+  color: var(--darkGrey);
+  border: 1px solid var(--darkGrey);
+  margin: 10px 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-family: var(--playfairDisplay);
+  text-transform: uppercase;
+}

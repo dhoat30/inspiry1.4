@@ -1,7 +1,48 @@
 <?php 
 get_header(); 
 ?>
+<section class="home-page">
+    <div class="hero-banner-container">
+        <?php 
+            $argsBanner = array(
+                'post_type' => 'sliders',
+                'posts_per_page'=> 1,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'slider-category',
+                            'field'    => 'slug',
+                            'terms'    => array( 'home-page-hero-banner'),
+                        )
+                        ), 
+            );
+            $banner = new WP_Query( $argsBanner );
+            while($banner->have_posts()){ 
+                $banner->the_post(); 
+                $image = get_field('mobile_image'); 
+                $imgUrl; 
+                if($image['sizes']['medium_large']){
+                    $imgUrl = $image['sizes']['medium_large'];
+                }
+                else{
+                    $imgUrl = $image['url'];
+                }
+                ?>
+                <a href="<?php echo get_field('add_link'); ?>">
+                    <picture>
+                                <source media="(min-width:1366px)" srcset="<?php echo get_the_post_thumbnail_url(null,"full"); ?>">
+                                <source media="(min-width:600px)" srcset="<?php echo get_the_post_thumbnail_url(null,"large"); ?>">
+                                <img loading="lazy" src="<?php echo esc_url($imgUrl);?>"
+                                alt="<?php echo get_the_title();?>" width="100%">
+                
+                    </picture>
+                </a>
 
+                <?php 
+            }
+            wp_reset_postdata();
+            ?>
+    </div>        
+</section>
 <section class="home-page">
     <div class="video-container">
         <?php 

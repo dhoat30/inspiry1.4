@@ -286,6 +286,7 @@ class DesignBoardSaveBtn {
 
     //show board
     showChooseBoardContainer(e) {
+        e.preventDefault()
         console.log("design icon clicked")
         let eventPostID;
         let eventPostTitle;

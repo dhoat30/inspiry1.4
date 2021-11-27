@@ -261,37 +261,6 @@ p {
   margin: 0 0 20px 0 !important;
 }
 
-/*wishlist and design board*/
-.wishlist-designer-board-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.yith-wcwl-add-to-wishlist {
-  margin-top: 0 !important;
-}
-.yith-wcwl-add-to-wishlist .single_add_to_wishlist i {
-  margin-right: 0;
-  font-size: 20px;
-  color: var(--blue);
-}
-.yith-wcwl-add-to-wishlist .single_add_to_wishlist {
-  border-radius: 50% !important;
-  padding: 8px 5px 3px 8px !important;
-}
-/* 
-.yith-wcwl-add-to-wishlist {
-  margin-top: 0 !important;
-}
-.yith-wcwl-add-button a {
-  padding: 0 !important;
-}
-.yith-wcwl-add-to-wishlist i {
-  margin-top: 5px !important;
-  font-size: 25px !important;
-  font-weight: 300 !important;
-} */
-
 /*warrenty */
 .bc-single-product__warranty h1 {
   padding: 10px 0 !important;

@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) or die();
 // call sdk library
 require_once 'Facebook/autoload.php';
 
-session_start();
+// session_start();
 $FBObject = new \Facebook\Facebook([
 	'app_id' => '216078630632170',
 	'app_secret' => '4e6f9a18d9e13009cbe8034e9c489331',

@@ -16,8 +16,6 @@ import LayBuy from './modules/LayBuy';
 import TradeNav from './modules/TradeNav';
 import DesignBoard from './modules/DesignBoard';
 import DesignBoardSaveBtn from './modules/DesignBoardSaveBtn';
-import DesignBoardAjax from './modules/DesignBoardAjax';
-import WishlistAjaxBp from './modules/WishlistAjaxBp';
 import FacetWp from './modules/FacetWp';
 //import LogIn from './modules/LogIn';
 import Overlay from './modules/overlay';
@@ -54,6 +52,8 @@ import CheckoutInputValidation from './modules/Windcave/CheckoutInputValidation'
 // search 
 import Search from './modules/Search'
 
+// facet filter
+import FacetFilter from './modules/FacetFilter/FacetFilter'
 
 window.onload = function () {
   //send request to 
@@ -99,6 +99,9 @@ window.onload = function () {
 
   // search 
   const search = new Search()
+
+  // facet filter 
+  const facetFilter = new FacetFilter()
 
   //price 
   let pricevalue = document.getElementsByClassName('bc-show-current-price');
@@ -351,3 +354,18 @@ async function validateTransaction() {
   }
 
 }
+
+// hide facet if no value 
+(function ($) {
+  document.addEventListener('facetwp-loaded', function () {
+    $.each(FWP.settings.num_choices, function (key, val) {
+      var $facet = $('.facetwp-facet-' + key);
+      var $parent = $facet.closest('.facet-wrap');
+      var $flyout = $facet.closest('.flyout-row');
+      if ($parent.length || $flyout.length) {
+        var $which = $parent.length ? $parent : $flyout;
+        (0 === val) ? $which.hide() : $which.show();
+      }
+    });
+  });
+})(jQuery);
