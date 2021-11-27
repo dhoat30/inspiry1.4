@@ -177,7 +177,6 @@ textarea::placeholder {
 
 .row-container {
   width: 95%;
-
   max-width: 1600px;
   margin: 0 auto;
   position: relative;

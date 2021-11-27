@@ -6,6 +6,7 @@ get_header();
    
 <!--Trending section  ----->
 
+
 <section class="trending-section  margin-row row-container">
     
     <div class="title-container flex-row flex-start align-end">

@@ -100,28 +100,64 @@ remove_action('yith_wcwl_before_wishlist_title', "YITH_WCWL_Frontend_Premium", 1
 
 
 // remove product loop title
+add_filter('woocommerce_show_page_title', 'webduel_hide_shop_page_title');
+ 
+function webduel_hide_shop_page_title($title) {
+   if (is_shop()) $title = false;
+   return $title;
+}
 
 
 // yoast breadcrumb
  add_action('woocommerce_before_main_content', 'webduel_filter_button', 10); 
 
  function webduel_filter_button(){ 
-     if(is_archive()){ 
+     if(is_archive() || is_shop() || is_product_category()){ 
         echo '<div class="breadcrumb-container"> 
         ';
      }
    
  }
 
+//  add mobile filter button
  add_action('woocommerce_before_main_content', 'webduelClosingDiv', 30); 
 
  function webduelClosingDiv(){
-     if(is_archive()){ 
+     if(is_archive() || is_shop() || is_product_category()){ 
         echo '<div class="mobile">'; 
         echo do_shortcode('[add_filter_button]'); 
         echo '</div>'; 
     echo '</div>'; 
      }
    
+
 }
 
+// add fixed filter button for mobile 
+add_action('woocommerce_after_main_content', function(){ 
+    if(is_archive() || is_shop() || is_product_category()){ 
+        echo '<div class="fixed-filter-button">'; 
+        echo do_shortcode('[add_filter_button]'); 
+        echo '</div>'; 
+    echo '</div>'; 
+    }
+}, 10); 
+
+// add category banner
+add_action('add_filters', 'add_category_banner_webduel', 1); 
+function add_category_banner_webduel(){ 
+    global $wp_query;
+    $cat = $wp_query->get_queried_object();
+       $catID = $cat->term_id; 
+       $thumbnail_id =   get_term_meta( $catID, 'thumbnail_id', true );
+       $imageLarge = wp_get_attachment_image_src($thumbnail_id, 'large' );
+       $imageMedium = wp_get_attachment_image_src($thumbnail_id, 'thumbnail_image_width' );
+        if($thumbnail_id){ 
+          echo ' <picture>
+            <source media="(min-width:1366px)" srcset="'.$imageLarge[0].'">
+            <source media="(min-width:600px)" srcset="'.$imageLarge[0].'">
+            <img class="product-cat-banner"  loading="lazy" src="'.$imageMedium[0].'"
+            alt="<?php echo get_the_title();?>" width="100%" >
+            </picture>'; 
+        }
+}

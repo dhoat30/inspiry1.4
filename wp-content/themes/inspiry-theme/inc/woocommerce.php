@@ -26,10 +26,10 @@ function mytheme_add_woocommerce_support(){
 }
 
 //adding container on product archive page
-add_action('add_filters', 'add_container', 1); 
+add_action('add_filters', 'add_container', 5); 
 function add_container($class){
 echo '<section class="product-loop-page-section">';
-echo '<div class="container flex-row flex-space-between product-loop-page-container'.$class.'">';
+echo '<div class="container flex-row flex-space-between product-loop-page-container '.$class.'">';
 
 }
 
@@ -45,7 +45,7 @@ function add_double_container_closing_div(){
     echo '</div></div>';
     }
 
-add_action('add_filters', 'add_facetwp_filters', 1); 
+add_action('add_filters', 'add_facetwp_filters', 10); 
 
 function add_facetwp_filters(){
     echo '<div class="facet-wp-container">' ;

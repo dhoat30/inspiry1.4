@@ -1,5 +1,8 @@
 <?php 
 get_header(); 
+// echo '<div class="mobile">'; 
+// echo do_shortcode('[add_filter_button]'); 
+// echo '</div>'; 
 ?>
 <section class="home-page">
     <div class="hero-banner-container">
@@ -29,7 +32,7 @@ get_header();
                 ?>
                 <a href="<?php echo get_field('add_link'); ?>">
                     <picture>
-                                <source media="(min-width:1366px)" srcset="<?php echo get_the_post_thumbnail_url(null,"full"); ?>">
+                                <source media="(min-width:1366px)" srcset="<?php echo get_the_post_thumbnail_url(null,"full"); ?>" width="300px">
                                 <source media="(min-width:600px)" srcset="<?php echo get_the_post_thumbnail_url(null,"large"); ?>">
                                 <img loading="lazy" src="<?php echo esc_url($imgUrl);?>"
                                 alt="<?php echo get_the_title();?>" width="100%">

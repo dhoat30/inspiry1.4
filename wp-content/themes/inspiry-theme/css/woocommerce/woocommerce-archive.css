@@ -7,7 +7,11 @@
   margin: 0 auto -50px auto;
   position: relative;
 }
-
+@media (max-width: 600px) {
+  .product-loop-page-container {
+    padding: 20px 0;
+  }
+}
 .container #primary {
   width: 75%;
 }
@@ -235,3 +239,5 @@ span {
 .archive .product .yith-wcwl-wishlistaddedbrowse {
   display: none;
 }
+
+/* product category banner */
